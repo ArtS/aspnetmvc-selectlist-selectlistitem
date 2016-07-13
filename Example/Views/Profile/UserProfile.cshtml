@@ -1,4 +1,4 @@
-﻿@model global::Validation.Models.UserProfileModel
+﻿@model global::Example.Models.UserProfileModel
 
 @{ ViewBag.Title = "Your profile"; }
 
@@ -25,24 +25,39 @@
                         @Html.ValidationMessageFor(m => m.LastName)
                     </div>
 
-                    @* State selection dropdown *@
+                    @* Country of birth selection dropdown *@
                     <div class="form-group">
-                        @Html.LabelFor(m => m.State)
-                        @Html.DropDownListFor(m => m.State, // Store selected value in Model.State
+                        @Html.LabelFor(m => m.CountryOfBirthId)
+                        @Html.DropDownListFor(m => m.CountryOfBirthId, // Store selected value in Model.DefaultCountryOfBirthId
 
-                                              // This argument needs some explanation - here we take a Distionary<string, string>
-                                              // and turn it into an instance of SelectList, see blog post for more details
-                                              new SelectList(Model.States, "Key", "Value"),
+                                              //
+                                              new SelectList(Model.CountriesOfBirth, "Id", "Name", Model.DefaultCountryOfBirthId),
 
                                               // Text for the first 'default' option
-                                              "- Please select your state -",
-                                              
+                                              "- Please select your country of birth -",
+
                                               // A class name to put on the "<select>"
                                               new { @class = "form-control" }
-                                             ) 
-                        @Html.ValidationMessageFor(m => m.State)
+                                             )
+                        @Html.ValidationMessageFor(m => m.CountryOfResidenceId)
                     </div>
 
+                    @* Country of residence selection dropdown *@
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.CountryOfResidenceId)
+                        @Html.DropDownListFor(m => m.CountryOfResidenceId, // Store selected value in Model.DefaultCountryOfBirthId
+
+                                              //
+                                              Model.CountriesOfResidence,
+
+                                              // Text for the first 'default' option
+                                              "- Please select your country of residence -",
+
+                                              // A class name to put on the "<select>"
+                                              new { @class = "form-control" }
+                                             )
+                        @Html.ValidationMessageFor(m => m.CountryOfResidenceId)
+                    </div>
                     <button type="submit" class="btn btn-primary">Update</button>
                 }
             </div>

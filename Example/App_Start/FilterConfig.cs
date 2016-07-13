@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Validation
+namespace Example
 {
     public class FilterConfig
     {

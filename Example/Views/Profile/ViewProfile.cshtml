@@ -1,4 +1,4 @@
-﻿@model global::Validation.Models.UserProfileModel
+﻿@model global::Example.Models.UserProfileModel
 @{
     ViewBag.Title = String.Format("Welcome, {0} {1}", Model.FirstName, Model.LastName);
 }
@@ -17,8 +17,12 @@
                     <dt>Name</dt>
                     <dd>@Model.FirstName @Model.LastName</dd>
 
-                    <dt>State</dt>
-                    <dd>@Model.StateName</dd>
+                    <dt>Country of birth</dt>
+                    <dd>@Model.CountryOfBirthName</dd>
+
+                    <dt>Country of residence</dt>
+                    <dd>@Model.CountryOfResidenceName</dd>
+
                     
                     <dt><a href="@Url.Action("UserProfile")">Edit profile</a></dt>
                 </dl>
