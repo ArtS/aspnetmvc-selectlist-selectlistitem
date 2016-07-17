@@ -1,6 +1,6 @@
-This is a sample project to go with the article "[How to use Bootstrap 3 validation states with ASP.NET MVC Forms][1]"
+This is a sample project to go with the article "[How to select a default value in DropDownList from database][1]"
 
-[1]:http://nimblegecko.com/how-to-use-bootstrap-3-validation-states-with-asp-net-mvc-forms/
+[1]:http://nimblegecko.com/how-to-set-default-selected-value-on-drop-down-list-from-database/
 
 ###License###
 Copyright (C) 2012 Artem Skvira
